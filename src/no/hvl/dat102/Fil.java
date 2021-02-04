@@ -13,11 +13,7 @@ import no.hvl.data.adt.FilmarkivADT;
 public class Fil {
 	private static final String SKILLE = "#";
 
-//	private static final String FILNAVN = "FilmFil.txt";
 	public static FilmarkivADT lesFraFil(String filnavn) {
-
-//		filnavn = "FilmArkiv.txt";
-//		filnavn = "FilmFil.txt";
 
 		FilmarkivADT filmarkiv = null;
 
@@ -62,13 +58,7 @@ public class Fil {
 		return filmarkiv;
 	}
 
-// Lagre et Filmarkiv til tekstfil
 	public static void skrivTilFil(FilmarkivADT filmarkiv, String filnavn) {
-		// Åpne ny fil
-		// Skriv data til fil
-		// Lukke filen
-
-//		filnavn = "FilmArkiv.txt";
 
 		try {
 			FileWriter fil = new FileWriter(filnavn, false);

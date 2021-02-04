@@ -65,8 +65,8 @@ public class Meny {
 
 		switch (type) {
 		case "L":
-			filma.leggTilFilm(tekstgr.lesFilm());
-			Fil.skrivTilFil(filma, filnavn);
+			this.filma.leggTilFilm(tekstgr.lesFilm());
+			Fil.skrivTilFil(this.filma, filnavn);
 			break;
 
 		case "S":

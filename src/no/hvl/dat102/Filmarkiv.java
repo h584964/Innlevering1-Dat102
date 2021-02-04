@@ -85,9 +85,10 @@ public class Filmarkiv implements FilmarkivADT {
 	public int antall(Sjanger sjanger) {
 		int a = 0;
 		for (int i = 0; i < antall; i++) {
-			if (filmtabell[i].getSjanger().equals(sjanger))
-				;
-			a++;
+			if (filmtabell[i].getSjanger().equals(sjanger)) {
+				a++;
+			}
+			
 		}
 
 		return a;

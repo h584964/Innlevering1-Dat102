@@ -2,8 +2,10 @@
  * 
  */
 package no.hvl.dat102.sirkulaer;
+
 import no.hvl.dat102.adt.KoeADT;
 import no.hvl.dat102.exception.EmptyCollectionException;
+
 /**
  * @author Ole Olsen
  * @param <T>
@@ -28,22 +30,31 @@ public class SirkulaerKoe<T> implements KoeADT<T> {
 		if (antall() == koe.length)
 			utvid();
 
-		//TODO
-		
+		koe[bak] = element;
+		bak = (bak + 1) % koe.length;
+
+		antall++;
+
 	}
 
-	public T utKoe()  {
+	public T utKoe() {
 		if (erTom())
 			throw new EmptyCollectionException("koe");
 
-	  //TODO
-		return null;
+		T resultat = koe[foran];
+		koe[foran] = null;
+		foran = (foran + 1) % koe.length;
+
+		antall--;
+		
+		return resultat;
+
 	}
 
-	public T foerste()  {
+	public T foerste() {
 		if (erTom())
 			throw new EmptyCollectionException("koe");
-		
+
 		T resultat = koe[foran];
 		return resultat;
 	}
@@ -58,8 +69,7 @@ public class SirkulaerKoe<T> implements KoeADT<T> {
 
 	private void utvid() {
 		T[] hjelpetabell = (T[]) (new Object[koe.length * 2]);
-		//TODO
-		
+		// TODO
+
 	}
 }// class
-

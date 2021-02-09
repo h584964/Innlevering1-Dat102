@@ -62,18 +62,21 @@ public class Tekstgrensesnitt {
 		Film[] film = filma.soekTittel(delstreng);
 
 		for (int i = 0; i < film.length; i++) {
+			if(film[i] != null) {
 			System.out.println(film[i].getTittle());
-
+			}
 		}
 
 	}
 
 	// Skriver ut alle Filmer av en produsent / en gruppe
 	public void skrivUtFilmProdusent(FilmarkivADT filma, String delstreng) {
-		Film[] film1 = filma.soekProdusent(delstreng);
+		Film[] film = filma.soekProdusent(delstreng);
 
-		for (int i = 0; i < film1.length; i++) {
-			System.out.println(film1[i].getProdusent());
+		for (int i = 0; i < film.length; i++) {
+			if(film[i] != null) {
+			System.out.println(film[i].getProdusent());
+			}
 		}
 
 	}
